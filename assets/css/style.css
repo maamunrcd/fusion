@@ -296,21 +296,13 @@ a:hover {
 }
 .section-wrapper.products .section-item {
     padding: 20px 15px;
-    border-bottom: 6px solid #53B7FC;
+    border-bottom: 6px solid transparent;
     border-radius: 0;
-    box-shadow: 10px 0 15px #e8e8e8;
+    box-shadow: 0 6px 10px #e8e8e8;
+    transition: all .5s;
 }
-.section-wrapper.products .section-item.purple {
-    border-color: #B0A6FD;
-}
-.section-wrapper.products .section-item.orange {
-    border-color: #FFBA88;
-}
-.section-wrapper.products .section-item.pink {
-    border-color: #FD9ACC     ;
-}
-.section-wrapper.products .section-item.green {
-    border-color: #3CD48B     ;
+.section-wrapper.products .section-item:hover {
+  border-bottom: 6px solid #53B7FC;
 }
 
 .products .section-item-content .page-para, .section-wrapper .page-para {
@@ -647,7 +639,7 @@ a:hover {
 
 
 footer {
-  background: #0E2A47;
+  background: #000;
   position: relative;
   padding: 290px 0 0;
 }
@@ -671,11 +663,12 @@ footer::after {
   }
 }
 footer .page-para {
-  color:#DDDDDD;
-  font-size: 14px;
+  color:#adadad;
+  font-size: 16px;
+  line-height: 26px;
 }
 .contact-info {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 @media screen and (max-width: 1199px) and (min-width: 992px){
   .contact-info-wrapper .contact-info {
@@ -709,10 +702,13 @@ footer .page-para {
 }
 .footer-info .page-para {
   text-align: justify;
+  font-size: 16px;
+    line-height: 26px;
 }
 .contact-info .footer-sub-heading {
   font-size: 18px;
   font-weight: 700;
+  padding: 10px 0;
   color: white;
   font-family: 'Roboto', sans-serif;
 }
@@ -725,36 +721,42 @@ footer .page-para {
 }
 .usefull-link ul li a {
   font-family: 'Roboto', sans-serif;
-  color: #DDDDDD;
-  font-size: 14px;
+  color: #adadad;
+  font-size: 16px;
+  line-height: 26px;
 }
 .office-address-item-contact li {
 display: inline-block;
-font-size: 13px;
-color:#DDDDDD;
+font-size: 16px;
+color:#adadad;
+margin-right: 10px;
 }
 .office-address-item-contact li:last-child {
-  margin-left: 10px;
-}
-@media screen and (max-width: 767px) {
-  .office-address-item-contact li:last-child {
-    margin-left: 0px;
+  margin-right: 0;
   }
+@media screen and (max-width: 767px) {
   .office-address-item-contact li {
     margin: 5px 0;
   }
 }
 .office-address-item-contact li .p-number{
   margin-left: 5px;
+  font-size: 15px;
+}
+.office-address-item-contact li {
+  margin-right: 20px;
 }
 .office-address-item {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 .office-address-item .page-para {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 26px;
 }
 .office-address-item .footer-sub-heading {
   font-weight: 400;
+  padding: 14px 0;
 }
 
 .copyright {
@@ -819,7 +821,7 @@ color:#DDDDDD;
     z-index: 10;
   }
  }
- @media screen and (max-width: 768px)  {
+ @media screen and (max-width: 767px)  {
   .slider-banner {
     background: none;
     height: auto;

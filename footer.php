@@ -18,66 +18,52 @@ $options = get_option('infotech_theme_option'); // unique id of the framework
 <footer>
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-6 col-lg-6 col-xl-3">
-				<div class="footer-info">
-					<a class="d-flex mb-1" href="<?php echo home_url(); ?>">
-						<img src=<?php echo $options['footer-logo']; ?> alt="footer logo">
-					</a>
-					<p class="page-para">
-						<?php echo $options['footer-text']; ?>
-					</p>
-				</div>
-			</div>
-			<div class="col-12 col-md-6 col-lg-6 col-xl-2 d-flex flex-wrap flex-lg-wrap contact-info-wrapper">
-				<div class="contact-info">
-					<h6 class="footer-sub-heading">
-						Email Us —
-					</h6>
-					<p class="page-para"><?php echo $options['footer-email-us']; ?></p>
-				</div>
-				<div class="contact-info">
-					<h6 class="footer-sub-heading">
-						Fellow Us —
-					</h6>
-					<div class="social-media">
-						<ul class="d-flex align-content-center align-items-center">
-							<li>
-								<a href="<?php echo $options['fellow-us-tab']['facebook-social-url']; ?>">
-									<img src="<?php echo $options['fellow-us-tab']['facebook-social']; ?>">
-								</a>
-							</li>
-							<li>
-								<a href="<?php echo $options['fellow-us-tab']['twitter-social-url']; ?>">
-									<img src="<?php echo $options['fellow-us-tab']['twitter-social']; ?>">
-								</a>
-							</li>
-							<li>
-								<a href="<?php echo $options['fellow-us-tab']['linkedin-social-url']; ?>">
-									<img src="<?php echo $options['fellow-us-tab']['linkedin-social']; ?>">
-								</a>
-							</li>
-							<li>
-								<a href="<?php echo $options['fellow-us-tab']['youtube-social-url']; ?>">
-									<img src="<?php echo $options['fellow-us-tab']['youtube-social']; ?>">
-								</a>
-							</li>
-						</ul>
+			<div class="col-12 col-md-12 col-lg-12 col-xl-3">
+				<div class="row">
+					<div class="col-12 col-sm-9 col-md-9 col-lg-8 col-xl-12">
+						<div class="footer-info">
+							<a class="d-flex mb-1" href="<?php echo home_url(); ?>">
+								<img src=<?php echo $options['footer-logo']; ?> alt="footer logo">
+							</a>
+							<p class="page-para">
+								<?php echo $options['footer-text']; ?>
+							</p>
+						</div>
+					</div>
+					<div class="col-12 col-sm-3 col-md-3 col-lg-4 col-xl-12">
+						<div class="contact-info">
+							<h6 class="footer-sub-heading">
+								Fellow Us —
+							</h6>
+							<div class="social-media">
+								<ul class="d-flex align-content-center align-items-center">
+									<li>
+										<a href="<?php echo $options['fellow-us-tab']['facebook-social-url']; ?>">
+											<img src="<?php echo $options['fellow-us-tab']['facebook-social']; ?>">
+										</a>
+									</li>
+									<li>
+										<a href="<?php echo $options['fellow-us-tab']['twitter-social-url']; ?>">
+											<img src="<?php echo $options['fellow-us-tab']['twitter-social']; ?>">
+										</a>
+									</li>
+									<li>
+										<a href="<?php echo $options['fellow-us-tab']['linkedin-social-url']; ?>">
+											<img src="<?php echo $options['fellow-us-tab']['linkedin-social']; ?>">
+										</a>
+									</li>
+									<li>
+										<a href="<?php echo $options['fellow-us-tab']['youtube-social-url']; ?>">
+											<img src="<?php echo $options['fellow-us-tab']['youtube-social']; ?>">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="contact-info">
-					<h6 class="footer-sub-heading">
-						Useful links —
-					</h6>
-					<div class="list usefull-link">
-						<?php wp_nav_menu(array(
-							'theme_location' => 'footer_menu',
-							'menu_class'        => 'd-flex flex-column',
-						)); ?>
-					</div>
-
-				</div>
 			</div>
-			<div class="col-12 col-lg-12 col-xl-7">
+			<div class="col-12 col-lg-12 col-xl-9 mt-sm-4 mt-md-4 mt-xl-0">
 				<div class="our-offices">
 					<div class="contact-info">
 						<h4 class="footer-heading">
@@ -85,7 +71,7 @@ $options = get_option('infotech_theme_option'); // unique id of the framework
 						</h4>
 						<div class="office-addresses">
 							<div class="row">
-								<div class="col-6">
+								<div class="col-12 col-sm-12 col-md-6">
 									<div class="office-address-item">
 										<h6 class="footer-sub-heading">
 											<?php echo $options['our-offices-tab']['office-1-name']; ?>
@@ -93,7 +79,7 @@ $options = get_option('infotech_theme_option'); // unique id of the framework
 										<p class="page-para">
 											<?php echo $options['our-offices-tab']['office-1-address']; ?>
 										</p>
-										<ul class="office-address-item-contact mt-2 d-flex justify-content-between">
+										<ul class="office-address-item-contact mt-2 d-flex justify-content-xl-between">
 											<?php if ($options['our-offices-tab']['office-1-phone'] !== '') {
 											?>
 												<li>
@@ -117,7 +103,7 @@ $options = get_option('infotech_theme_option'); // unique id of the framework
 										</ul>
 									</div>
 								</div>
-								<div class="col-6">
+								<div class="col-12 col-sm-12 col-md-6">
 									<div class="office-address-item">
 										<h6 class="footer-sub-heading">
 											<?php echo $options['our-offices-tab']['office-2-name']; ?>
@@ -125,7 +111,7 @@ $options = get_option('infotech_theme_option'); // unique id of the framework
 										<p class="page-para">
 											<?php echo $options['our-offices-tab']['office-2-address']; ?>
 										</p>
-										<ul class="office-address-item-contact mt-2 d-flex justify-content-between">
+										<ul class="office-address-item-contact mt-2 d-flex justify-content-xl-between">
 											<?php if ($options['our-offices-tab']['office-2-phone'] !== '') {
 											?>
 												<li>
@@ -149,7 +135,7 @@ $options = get_option('infotech_theme_option'); // unique id of the framework
 										</ul>
 									</div>
 								</div>
-								<div class="col-6">
+								<div class="col-12 col-sm-12 col-md-6">
 									<div class="office-address-item">
 										<h6 class="footer-sub-heading">
 											<?php echo $options['our-offices-tab']['office-3-name']; ?>
@@ -157,7 +143,7 @@ $options = get_option('infotech_theme_option'); // unique id of the framework
 										<p class="page-para">
 											<?php echo $options['our-offices-tab']['office-3-address']; ?>
 										</p>
-										<ul class="office-address-item-contact mt-2 d-flex justify-content-between">
+										<ul class="office-address-item-contact mt-2 d-flex justify-content-xl-between">
 											<?php if ($options['our-offices-tab']['office-3-phone'] !== '') {
 											?>
 												<li>
@@ -179,6 +165,33 @@ $options = get_option('infotech_theme_option'); // unique id of the framework
 											<?php
 											} ?>
 										</ul>
+									</div>
+								</div>
+								<div class="col-12 col-sm-12 col-md-6">
+									<div class="row">
+										<div class="col-6">
+											<div class="contact-info">
+												<h6 class="footer-sub-heading">
+													Useful links —
+												</h6>
+												<div class="list usefull-link">
+													<?php wp_nav_menu(array(
+														'theme_location' => 'footer_menu',
+														'menu_class'        => 'd-flex flex-column',
+													)); ?>
+												</div>
+
+											</div>
+										</div>
+										<div class="col-6">
+											<div class="contact-info">
+												<h6 class="footer-sub-heading">
+													Email Us —
+												</h6>
+												<p class="page-para"><?php echo $options['footer-email-us']; ?></p>
+											</div>
+										</div>
+
 									</div>
 								</div>
 							</div>

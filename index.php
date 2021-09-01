@@ -143,7 +143,7 @@ get_header();
                     array(
                         'post_type' => 'announcements',
                         'posts_per_page' => 1,
-                        'order' => 'ASC'
+                        'order' => 'DESC'
                     )
                 );
                 ?>
@@ -236,7 +236,7 @@ get_header();
                     array(
                         'post_type' => 'videos',
                         'posts_per_page' => 1,
-                        'order' => 'ASC'
+                        'order' => 'DESC'
                     )
                 );
                 ?>
@@ -349,6 +349,7 @@ get_header();
                 );
                 ?>
                 <?php while ($query->have_posts()) : $query->the_post(); ?>
+                    <?php gt_set_post_view(); ?>
                     <div class="col-4">
                         <div class="card post rounded-0 border-0">
                             <img class="card-img-top" src=<?php echo get_the_post_thumbnail_url() ?> alt="Card image cap">
@@ -359,8 +360,8 @@ get_header();
                                         <span><?php echo get_the_date(); ?></span>
                                     </div>
                                     <div class="clock-comments-item d-flex align-items-center justify-content-center">
-                                        <img class="icon" src="<?php echo get_template_directory_uri() ?>/assets/images/comment-text-multiple.svg">
-                                        <span><?php echo wp_count_comments()->approved ?></span>
+                                        <img class="icon" src="<?php echo get_template_directory_uri() ?>/assets/images/eye.svg">
+                                        <span><?= gt_get_post_view(); ?></span>
                                     </div>
                                 </div>
                                 <h5 class="card-title post-title"><?php echo get_the_title(); ?></h5>

@@ -4,46 +4,27 @@
  * The template for displaying all single posts and attachments
  *
  * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
+ * @subpackage Infotech
+ * @since Infotech 1.0
  */
 
 get_header(); ?>
+<main class="inner">
+    <section class="section-wrapper products">
+        <div class="page-header-wrapper carousel-inner">
+            <div class="carousel-item active">
+                <img src="<?php echo the_post_thumbnail_url('full'); ?>" alt="page-banner">
+                <div class="carousel-caption d-flex justify-content-center align-content-center">
+                    <h5 class="page-title"><?php echo get_the_title(); ?></h5>
+                </div>
+            </div>
+        </div>
+        <div class="main_content">
+            <?php the_content(); ?>
+        </div>
+    </section>
 
-<div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+</main>
 
-        <?php
-        // Start the loop.
-        while (have_posts()) : the_post();
-
-            /*
-             * Include the post format-specific template for the content. If you want to
-             * use this in a child theme, then include a file called called content-___.php
-             * (where ___ is the post format) and that will be used instead.
-             */
-            get_template_part('content', get_post_format());
-
-            // If comments are open or we have at least one comment, load up the comment template.
-            if (comments_open() || get_comments_number()) :
-                comments_template();
-            endif;
-
-            // Previous/next post navigation.
-            the_post_navigation(array(
-                'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'twentyfifteen') . '</span> ' .
-                    '<span class="screen-reader-text">' . __('Next post:', 'twentyfifteen') . '</span> ' .
-                    '<span class="post-title">%title</span>',
-                'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'twentyfifteen') . '</span> ' .
-                    '<span class="screen-reader-text">' . __('Previous post:', 'twentyfifteen') . '</span> ' .
-                    '<span class="post-title">%title</span>',
-            ));
-
-        // End the loop.
-        endwhile;
-        ?>
-
-    </main><!-- .site-main -->
-</div><!-- .content-area -->
 
 <?php get_footer(); ?>
