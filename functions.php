@@ -736,7 +736,120 @@ if (class_exists('CSF')) {
 				),
 				'default'    => '0'
 
-			)
+			),
+			array(
+				'id'            => 'slider-round-image',
+				'type'          => 'tabbed',
+				'title'         => 'Slider Static Round Image',
+				'tabs'          => array(
+					array(
+						'title'     => 'First Image',
+						'fields'    => array(
+							array(
+								'id'    => 'first-image',
+								'type'  => 'upload',
+								'preview' => true,
+								'title' => 'First Round Image',
+							),
+						)
+					),
+					array(
+						'title'     => 'Second Image',
+						'fields'    => array(
+							array(
+								'id'    => 'second-image',
+								'type'  => 'upload',
+								'preview' => true,
+								'title' => 'Second Round Image',
+							),
+						)
+					),
+					array(
+						'title'     => 'Third Image',
+						'fields'    => array(
+							array(
+								'id'    => 'third-image',
+								'type'  => 'upload',
+								'preview' => true,
+								'title' => 'Third Round Image',
+							),
+						)
+					),
+					array(
+						'title'     => 'Fourth Image',
+						'fields'    => array(
+							array(
+								'id'    => 'fourth-image',
+								'type'  => 'upload',
+								'preview' => true,
+								'title' => 'Fourth Round Image',
+							),
+						)
+					),
+					array(
+						'title'     => 'Fifth Image',
+						'fields'    => array(
+							array(
+								'id'    => 'fifth-image',
+								'type'  => 'upload',
+								'preview' => true,
+								'title' => 'Fifth Round Image',
+							),
+						)
+					),
+					array(
+						'title'     => 'Sixth Image',
+						'fields'    => array(
+							array(
+								'id'    => 'sixth-image',
+								'type'  => 'upload',
+								'preview' => true,
+								'title' => 'Sixth Round Image',
+							),
+						)
+					)
+				)
+			),
+			array(
+				'id'            => 'static-image-title-icons',
+				'type'          => 'tabbed',
+				'title'         => 'Slider Static image Top Bottom Setting',
+				'tabs'          => array(
+					array(
+						'title'     => 'Slider static image top part',
+						'fields'    => array(
+							array(
+								'id'         => 'static-top-title',
+								'type'  => 'text',
+								'title'      => 'Static Image Top Title',
+							),
+							array(
+								'id'         => 'static-top-icon',
+								'type'       => 'upload',
+								'preview'	=> true,
+								'title'      => 'Static Image Top Icon',
+							),
+						)
+					),
+					array(
+						'title'     => 'Slider static image Bottom part',
+						'fields'    => array(
+							array(
+								'id'         => 'static-bottom-title',
+								'type'  => 'text',
+								'title'      => 'Static Image Bottom Title',
+							),
+							array(
+								'id'         => 'static-bottom-icon',
+								'type'       => 'upload',
+								'preview'	=> true,
+								'title'      => 'Static Image Bottom Icon',
+							),
+						)
+					)
+				)
+			),
+
 		)
 	));
 }

@@ -33,10 +33,11 @@ get_header();
                                 <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                                     <div class="carousel-item <?php echo $sliderIndex === 0 ? 'active' : '' ?>">
                                         <div class="carousel-item-wrapper">
+                                            <div class="slider-thumnail-img mb-md-3 mb-4">
+                                                <img class="img-fluid" src="<?php echo the_post_thumbnail_url(); ?>">
+                                            </div>
                                             <h1 class="slider-title"><?php echo the_title(); ?></h1>
-                                            <p class="slider-para">
-                                                <?php echo the_content(); ?>
-                                            </p>
+                                            <p class="slider-para"><?php the_content() ?></p>
                                             <a class="btn btn-primary" href=<?php echo get_field('slider_button_url'); ?>><?php echo get_field('slider_button_text'); ?></a>
                                         </div>
                                     </div>
@@ -49,7 +50,39 @@ get_header();
                     </div>
                     <div class="col-6 d-none d-md-block">
                         <div class="slider-thumbail">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/assets/images/slider-round-img.png">
+                            <div class="slider-static-img">
+                                <div class="slider-static-wrapper">
+                                    <div class="industries-serve d-flex align-items-center justify-content-center mt-0">
+                                        <img src="<?php echo $options['static-image-title-icons']['static-top-icon']; ?>">
+                                        <div class="serve-title"><?php echo $options['static-image-title-icons']['static-top-title']; ?></div>
+                                    </div>
+                                    <div class="title-with-item d-flex align-items-center experience-worker">
+                                        <img src="<?php echo $options['static-image-title-icons']['static-bottom-icon']; ?>">
+                                        <div class="serve-title"><?php echo $options['static-image-title-icons']['static-bottom-title']; ?></div>
+                                    </div>
+                                    <div class="circle-image-wrapper">
+                                        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/assets/images/slider-img-brand-logo.png">
+                                        <div class="circle-image img1">
+                                            <img class="img-fluid" src="<?php echo $options['slider-round-image']['first-image']; ?>">
+                                        </div>
+                                        <div class="circle-image img2">
+                                            <img class="img-fluid" src="<?php echo $options['slider-round-image']['second-image']; ?>">
+                                        </div>
+                                        <div class="circle-image img3">
+                                            <img class="img-fluid" src="<?php echo $options['slider-round-image']['third-image']; ?>">
+                                        </div>
+                                        <div class="circle-image img4">
+                                            <img class="img-fluid" src="<?php echo $options['slider-round-image']['fourth-image']; ?>">
+                                        </div>
+                                        <div class="circle-image img5">
+                                            <img class="img-fluid" src="<?php echo $options['slider-round-image']['fifth-image']; ?>">
+                                        </div>
+                                        <div class="circle-image img6">
+                                            <img class="img-fluid" src="<?php echo $options['slider-round-image']['sixth-image']; ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

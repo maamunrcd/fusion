@@ -20,7 +20,7 @@ a:hover {
 
 .slider-banner {
   background: url(../images/slider-wave.png) no-repeat left top;
-  height: 800px;
+  height: 880px;
   width: 100%;
   background-size:80% 100%;
 }
@@ -31,8 +31,9 @@ a:hover {
     margin: auto;
     width: 100%;
 }
-.slider-banner .carousel-inner {
-  margin-top: 60px;
+.slider-thumnail-img {
+  max-height: 230px;
+  overflow: hidden;
 }
 .slider-banner .carousel-inner.width-image {
   margin-top:-70px;
@@ -40,6 +41,55 @@ a:hover {
 }
 .slider-banner .carousel-inner.width-image .carousel-item-wrapper {
   padding-top: 70px;
+}
+.industries-serve {
+  margin-top: -70px;
+  margin-bottom: 40px;
+}
+.slider-thumbail {
+  padding-left: 120px;
+  margin-top: -70px;
+}
+.experience-worker {
+  position: absolute;
+  bottom: 30px;
+  left: -20px;
+}
+.circle-image-wrapper {
+  position: relative;
+}
+.circle-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+}
+.circle-image.img1 {
+  top: 15px;
+  left: 60px;
+}
+.circle-image.img2 {
+  top: 15px;
+  right: 60px;
+}
+.circle-image.img3 {
+  top: 50%;
+  transform: translateY(-50%);
+  left: -28px;
+}
+.circle-image.img4 {
+  top: 50%;
+  transform: translateY(-50%);
+  right: -28px;
+}
+.circle-image.img5 {
+  bottom: 15px;
+  left: 60px;
+}
+.circle-image.img6 {
+  bottom: 15px;
+  right: 60px;
 }
 .header-menu .navbar-light .navbar-nav .nav-item {
   padding: 0 20px;
@@ -87,20 +137,36 @@ a:hover {
     align-items: center;
 }
 .slider-banner .slider-title {
-  font-size: 54px;
+  font-size: 44px;
   font-weight: 700;
   color: #3F3F3F;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 50px;
 }
 .slider-banner .slider-para {
+  display: none;
+}
+.slider-banner .slider-para + p {
   font-size: 18px;
   margin-top: 20px;
+  line-height: 30px;
+  margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 .slider-banner  .btn-primary {
   font-size: 18px;
   padding: 10px 40px;
   background: #0187CE;
   border-color: #0187CE;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .inner {
   margin-top: 100px;
@@ -218,7 +284,7 @@ a:hover {
 
 
 .section-wrapper.service .section-item .section-item-title a, .section-wrapper.service .section-item .section-item-title {
-  height: 35px;
+  height: 33px;
 }
 .section-wrapper .page-para, .contain p {
     font-size: 16px;
@@ -781,6 +847,39 @@ margin-right: 10px;
 /* Media Queries */
 
 @media screen and (max-width: 1199px)  {
+  .slider-thumbail {
+    margin-top: 0;
+  }
+  .circle-image {
+    width: 45px;
+    height: 45px;
+  }
+  .circle-image.img1 {
+    top: 0px;
+    left: 60px;
+  }
+  .circle-image.img2 {
+    top: 0px;
+    right: 60px;
+  }
+  .circle-image.img3 {
+    top: 50%;
+    transform: translateY(-50%);
+    left: -18px;
+  }
+  .circle-image.img4 {
+    top: 50%;
+    transform: translateY(-50%);
+    right: -18px;
+  }
+  .circle-image.img5 {
+    bottom: 6px;
+    left: 60px;
+  }
+  .circle-image.img6 {
+    bottom: 6px;
+    right: 60px;
+  }
   .header-menu .navbar-light .navbar-nav .nav-item {
     padding: 0 15px;
   }
@@ -788,7 +887,7 @@ margin-right: 10px;
     width: 150px;
   }
   .slider-banner {
-    height: 650px;
+    height: 800px;
   }
   .slider-banner .btn-primary {
     margin-top: 10px;
@@ -796,19 +895,55 @@ margin-right: 10px;
   .slider-banner .slider-title {
     font-size: 40px;
   }
-  .slider-banner .carousel-inner {
-    margin-top: 80px;
-  }
 }
 @media screen and (max-width: 991px)  {
+  .circle-image.img1 {
+    top: -10px;
+    left: 50px;
+  }
+  .circle-image.img2 {
+    top: -10px;
+    right: 50px;
+  }
+  .circle-image.img3 {
+    top: 50%;
+    transform: translateY(-50%);
+    left: -15px;
+  }
+  .circle-image.img4 {
+    top: 50%;
+    transform: translateY(-50%);
+    right: -15px;
+  }
+  .circle-image.img5 {
+    bottom: 0px;
+    left: 60px;
+  }
+  .circle-image.img6 {
+    bottom: 0px;
+    right: 60px;
+  }
+  .title-with-item .serve-title, .industries-serve .serve-title {
+    font-size: 14px;
+  }
+  .experience-worker {
+    left: -30px;
+  }
+  .slider-thumbail {
+    padding-left: 60px;
+  }
   .slider-banner {
-    height: 500px;
+    height: 700px;
   }
   .slider-banner .slider-title {
-    font-size: 34px;
+    font-size: 30px;
+    line-height: 40px;
   }
-  .slider-banner .carousel-inner {
-    margin-top: 60px;
+  .slider-thumnail-img {
+    max-height: 200px;
+  }
+  .slider-banner .slider-para + p {
+    margin-top: 10px;
   }
   .slider-banner .slider-para {
     font-size: 16px;
