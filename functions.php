@@ -160,8 +160,7 @@ function create_slider()
 				'menu_name'             => __('Slider', 'textdomain'),
 				'featured_image'        => __('Slider image', 'textdomain'),
 				'set_featured_image'    => __('Set slider image', 'textdomain'),
-				'remove_featured_image' => __('Remove slider image', 'textdomain'),
-				'excerpt'
+				'remove_featured_image' => __('Remove slider image', 'textdomain')
 			),
 			'public' => true,
 			'has_archive' => true,
@@ -343,6 +342,9 @@ function change_post_object_label()
 	$labels->search_items = 'Search News & Events';
 	$labels->not_found = 'No News & Events found';
 	$labels->not_found_in_trash = 'No News & Events found in Trash';
+	$labels->featured_image = 'New & Events Image 400x400';
+	$labels->set_featured_image = 'Set New & Events Image';
+	$labels->remove_featured_image = 'Remove New & Events Image';
 }
 add_action('init', 'change_post_object_label');
 add_action('admin_menu', 'change_post_menu_label');
@@ -486,6 +488,11 @@ if (class_exists('CSF')) {
 								'id'    => 'video-title',
 								'type'  => 'textarea',
 								'title' => 'Video Title',
+							),
+							array(
+								'id'    => 'video-subtitle',
+								'type'  => 'textarea',
+								'title' => 'Video Sub Title',
 							),
 						)
 					),

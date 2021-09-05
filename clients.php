@@ -13,7 +13,9 @@ get_header();
     <section class="section-wrapper clients">
         <div class="page-header-wrapper carousel-inner">
             <div class="carousel-item active">
-                <img src="<?php echo the_post_thumbnail_url('full'); ?>" alt="page-banner">
+                <div class="client-logo-thumnail">
+                    <img src="<?php echo the_post_thumbnail_url('full'); ?>" alt="page-banner">
+                </div>
                 <div class="carousel-caption d-flex justify-content-center align-content-center">
                     <h5 class="page-title"><?php echo get_the_title(); ?></h5>
                 </div>

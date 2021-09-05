@@ -257,8 +257,11 @@ get_header();
             <div class="row">
                 <div class="col-12 offset-0 col-lg-8 offset-lg-2">
                     <div class="section-header">
-                        <h4 class="section-header-sub-title text-center">
+                        <h1 class="section-header-title text-center">
                             <?php echo $options['all-section-tab']['video-title']; ?>
+                        </h1>
+                        <h4 class="section-header-sub-title text-center">
+                            <?php echo $options['all-section-tab']['video-subtitle']; ?>
                         </h4>
                     </div>
                 </div>
@@ -269,7 +272,7 @@ get_header();
                     array(
                         'post_type' => 'videos',
                         'posts_per_page' => 1,
-                        'order' => 'DESC'
+                        'order' => 'ASC'
                     )
                 );
                 ?>
@@ -364,7 +367,7 @@ get_header();
                 <div class="row">
                     <div class="col-12 col-lg-8 offset-lg-2">
                         <p class="page-para text-center">
-                            <?php echo $options['all-section-tab']['trusted-by-title']; ?>
+                            <?php echo $options['all-section-tab']['news-events-subtitle']; ?>
                         </p>
                     </div>
                 </div>
@@ -377,7 +380,7 @@ get_header();
                     array(
                         'post_type' => 'post',
                         'posts_per_page' => 15,
-                        'order' => 'ASC'
+                        'order' => 'DESC'
                     )
                 );
                 ?>
@@ -385,7 +388,9 @@ get_header();
                     <?php gt_set_post_view(); ?>
                     <div class="col-4">
                         <div class="card post rounded-0 border-0">
-                            <img class="card-img-top" src=<?php echo get_the_post_thumbnail_url() ?> alt="Card image cap">
+                            <div class="card-thumbnail-img-wrapper">
+                                <img class="card-img-top" src=<?php echo get_the_post_thumbnail_url() ?> alt="Card image cap">
+                            </div>
                             <div class="card-body">
                                 <div class="clock-comments d-flex justify-content-between">
                                     <div class="clock-comments-item d-flex align-items-center justify-content-center">
@@ -411,7 +416,7 @@ get_header();
     </section>
     <section class="section-wrapper clients">
         <div class="section-header">
-            <h4 class="section-header-sub-title text-center">Trusted By</h4>
+            <h4 class="section-header-sub-title text-center"><?php echo $options['all-section-tab']['trusted-by-title']; ?></h4>
         </div>
         <div class="container">
             <div class="row clients-images common-slider align-content-center align-content-center">

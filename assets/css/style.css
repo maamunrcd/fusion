@@ -32,8 +32,11 @@ a:hover {
     width: 100%;
 }
 .slider-thumnail-img {
-  max-height: 230px;
-  overflow: hidden;
+  height: 230px;
+}
+.slider-thumnail-img img {
+  width: auto !important;
+  height: 100% !important;
 }
 .slider-banner .carousel-inner.width-image {
   margin-top:-70px;
@@ -94,18 +97,25 @@ a:hover {
 .header-menu .navbar-light .navbar-nav .nav-item {
   padding: 0 20px;
 }
+.header-menu .dropdown-menu {
+  margin: 0;
+  padding: 0;
+}
 .header-menu .dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0;
 }
 
 .header-menu .navbar-light .navbar-nav .nav-link, .header-menu .navbar-light .navbar-nav .dropdown-item {
-    padding:5px 0 !important;
+    padding:7px 0 !important;
     color: #3F3F3F;
     font-family: 'Roboto', sans-serif;
     font-size: 19px;
     font-weight: 400;
     border-bottom: 2px solid transparent;
+}
+.header-menu .navbar-light .navbar-nav .dropdown-item {
+  border-bottom: 1px solid #e8e8e8;
 }
 .header-menu .dropdown-item:focus, .header-menu .dropdown-item:hover {
   background-color: transparent;
@@ -152,7 +162,7 @@ a:hover {
 }
 .slider-banner .slider-para + p {
   font-size: 18px;
-  margin-top: 20px;
+  margin-top: 10px;
   line-height: 30px;
   margin-bottom: 0;
   overflow: hidden;
@@ -166,7 +176,6 @@ a:hover {
   padding: 10px 40px;
   background: #0187CE;
   border-color: #0187CE;
-  margin-top: 10px;
 }
 .inner {
   margin-top: 100px;
@@ -613,6 +622,12 @@ a:hover {
     color: #202020;
     padding: 15px 0 10px;
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: 80px;
   }
   .news-events .page-para {
       margin: 0;
@@ -634,6 +649,10 @@ a:hover {
   }
   .common-slider .slick-prev:before, .slick-next:before {
     display: none;
+  }
+  .clients .client-logo-thumnail {
+    height: 300px;
+    overflow: hidden;
   }
   .common-slider .slick-prev, .slick-next {
     margin: 0;
@@ -684,6 +703,10 @@ a:hover {
   }
   .common-slider .news-events-slider {
     padding-bottom: 40px;
+  }
+  .card-thumbnail-img-wrapper {
+    max-height: 180px;
+    overflow: hidden;
   }
   /* clock-comments */
   .clock-comments .clock-comments-item .icon {
@@ -836,11 +859,15 @@ margin-right: 10px;
 
 /* Global CSS */
 
-.btn-success, .btn-success:hover, .header-menu .navbar-light .navbar-nav .btn-success .nav-link  {
-  background:#0187CE;
-  border-color: #0187CE;
-  color: #FFFFFF;
+.btn-success, .btn-success:hover, .header-menu .navbar-light .navbar-nav .btn-success .nav-link, div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-container-full .wpforms-form button[type=submit], div.wpforms-container-full .wpforms-form .wpforms-page-button {
+  background:#0187CE !important;
+  border-color: #0187CE !important;
+  color: #FFFFFF !important;
 }
+div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-container-full .wpforms-form button[type=submit], div.wpforms-container-full .wpforms-form .wpforms-page-button {
+  padding: 10px 40px !important;
+}
+
 
 
 
@@ -897,6 +924,9 @@ margin-right: 10px;
   }
 }
 @media screen and (max-width: 991px)  {
+  .navbar-brand {
+    width: 120px;
+  }
   .circle-image.img1 {
     top: -10px;
     left: 50px;
@@ -957,10 +987,13 @@ margin-right: 10px;
   }
  }
  @media screen and (max-width: 767px)  {
+  .navbar-brand {
+    width: 100px;
+  }
   .slider-banner {
     background: none;
     height: auto;
-    padding: 80px 0 20px;
+    padding: 110px 0 20px;
   }
   .header-menu {
     background: white;
