@@ -295,7 +295,6 @@ get_header();
             array(
                 'post_type' => 'gallery',
                 'posts_per_page' => 15,
-                'order' => 'ASC'
             )
         ); ?>
         <div class="section-header">
@@ -338,19 +337,36 @@ get_header();
         <div id="myModal" class="modal">
             <span class="close cursor" onclick="closeModal()">&times;</span>
             <div class="modal-content">
-                <?php while ($query->have_posts()) : $query->the_post(); ?>
-                    <div class="slider-item">
-                        <div class="carousel-item active">
-                            <img class="img-fluid" src="<?php the_post_thumbnail_url('full'); ?>">
-                            <div class="carousel-caption">
-                                <h5 class="section-header-sub-title">
-                                    <?php echo get_the_title(); ?>
-                                </h5>
-                                <?php echo get_the_content(); ?>
+                <?php
+                $count = 1;
+                if ($query->have_posts()) {
+                    $columnCount = 4;
+                    $rows = array_chunk($query->get_posts(), $columnCount);
+                    foreach (range(0, $columnCount - 1) as $column) {
+                        foreach ($rows as $row) {
+                            if (false == isset($row[$column])) {
+                                continue;
+                            }
+                            $post = $row[$column];
+                            setup_postdata($post);
+                ?>
+                            <div class="slider-item">
+                                <div class="carousel-item active">
+                                    <img class="img-fluid" src="<?php the_post_thumbnail_url('full'); ?>">
+                                    <div class="carousel-caption">
+                                        <h5 class="section-header-sub-title">
+                                            <?php echo get_the_title(); ?>
+                                        </h5>
+                                        <?php echo get_the_content(); ?>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                <?php endwhile;
+
+                <?php
+                            $count++;
+                        }
+                    }
+                }
                 ?>
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>

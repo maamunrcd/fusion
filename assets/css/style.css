@@ -1,5 +1,5 @@
 body {
-    font-family: 'Nunito', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 * {
   padding: 0;
@@ -109,7 +109,7 @@ a:hover {
 .header-menu .navbar-light .navbar-nav .nav-link, .header-menu .navbar-light .navbar-nav .dropdown-item {
     padding:7px 0 !important;
     color: #3F3F3F;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 19px;
     font-weight: 400;
     border-bottom: 2px solid transparent;
@@ -297,7 +297,7 @@ a:hover {
 }
 .section-wrapper .page-para, .contain p {
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     line-height: 30px;
     color: #9695A4;
     margin-bottom: 20px;
@@ -787,7 +787,7 @@ footer .page-para {
   font-size: 22px;
   font-weight: 700;
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .footer-info .page-para {
   text-align: justify;
@@ -799,7 +799,7 @@ footer .page-para {
   font-weight: 700;
   padding: 10px 0;
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .list li {
   display: inline-block;
@@ -809,7 +809,7 @@ footer .page-para {
   margin-right: 15px;
 }
 .usefull-link ul li a {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   color: #adadad;
   font-size: 16px;
   line-height: 26px;
@@ -851,7 +851,7 @@ margin-right: 10px;
 .copyright {
   font-size: 16px;
   font-weight: 400;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   padding: 10px 50px;
   border-top: 1px solid #0B3A61;
   color: #DDDDDD;

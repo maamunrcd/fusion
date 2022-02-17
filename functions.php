@@ -551,6 +551,12 @@ if (class_exists('CSF')) {
 		'title'  => 'Footer Options',
 		'fields' => array(
 			array(
+				'id'    => 'footer-background',
+				'type'  => 'color',
+				'title' => 'Footer Background Color',
+				'default' => '#032b40'
+			),
+			array(
 				'id'    => 'footer-logo',
 				'type'  => 'upload',
 				'title' => 'Footer Logo',

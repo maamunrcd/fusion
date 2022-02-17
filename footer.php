@@ -15,7 +15,7 @@ $options = get_option('infotech_theme_option'); // unique id of the framework
 
 
 ?>
-<footer>
+<footer style="background-color: <?php echo $options['footer-background']; ?>">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-md-12 col-lg-12 col-xl-3">
@@ -293,7 +293,8 @@ $options = get_option('infotech_theme_option'); // unique id of the framework
 	copyrightElementId.innerText = new Date().getFullYear();
 
 
-	function openModal() {
+	function openModal(count) {
+		console.log(count, 'count')
 		document.getElementById("myModal").style.display = "flex";
 	}
 
@@ -313,8 +314,10 @@ $options = get_option('infotech_theme_option'); // unique id of the framework
 	}
 
 	function showSlides(n) {
+		console.log(n, "NNN");
 		var i;
 		var slides = document.getElementsByClassName("slider-item");
+		console.log(slides, "Slides")
 		var dots = document.getElementsByClassName("demo");
 		var captionText = document.getElementById("caption");
 		if (n > slides.length) {
